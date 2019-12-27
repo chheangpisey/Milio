@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.SettingFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bottom"
+        android:layout_alignParentBottom="true"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="14dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnSetting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/contacts"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnSetting"
+                android:fontFamily="sans-serif"
+                android:text="Setting"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/about"
+            app:civ_border_color="#9B9595"
+            app:civ_border_width="2dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/contacticon"
+            android:src="@drawable/contacts">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtsettingusername"
+            android:text=""
+            android:layout_toRightOf="@+id/contacticon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold">
+
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/idenicon"
+            android:src="@drawable/card">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textUserID"
+            android:text="jsjhduejwuooqqi78277889123893jjsjh"
+            android:layout_toRightOf="@+id/idenicon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold">
+
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/mailicon"
+            android:src="@drawable/mail">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abc@gmail.com"
+            android:id="@+id/textemail"
+            android:layout_toRightOf="@+id/mailicon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold">
+
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signout"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/signouticon"
+            android:src="@drawable/signout">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:layout_toRightOf="@+id/signouticon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="14dp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold">
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>
+</FrameLayout>

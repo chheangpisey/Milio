@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Controller.ActivityInChatBoard">
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/toolbar_bottom"
+           android:layout_marginTop="0dp"
+           android:minHeight="?attr/actionBarSize"
+           android:theme="?attr/actionBarTheme">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_marginRight="14dp"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:id="@+id/btnBacktoMsgBoard"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_marginLeft="0dp"
+                   android:src="@drawable/back"></ImageView>
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                   android:id="@+id/btnUserImage"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_toRightOf="@id/btnBacktoMsgBoard"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="20dp"
+                   android:src="@drawable/get"
+                   app:civ_border_color="#9B9595"
+                   app:civ_border_width="2dp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/txtUsername"
+                   android:layout_toRightOf="@id/btnUserImage"
+                   android:fontFamily="sans-serif"
+                   android:text="Kang Seugi"
+                   android:textColor="@android:color/black"
+                   android:textSize="20dp"
+                   android:textStyle="bold"></TextView>
+
+               <ImageView
+                   android:id="@+id/btnAboutUser"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/about" />
+
+
+           </RelativeLayout>
+       </androidx.appcompat.widget.Toolbar>
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/rvChatting"
+           android:scrollbars="vertical"
+           android:layout_above="@+id/toolbarbottom"
+           android:layout_below="@+id/toolbar">
+       </androidx.recyclerview.widget.RecyclerView>
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbarbottom"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:background="@drawable/toolbar_bottom"
+           android:minHeight="?attr/actionBarSize"
+           android:theme="?attr/actionBarTheme">
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/attach"
+               android:id="@+id/btnAttachfile">
+           </ImageView>
+           <EditText
+               android:layout_width="310dp"
+               android:layout_height="wrap_content"
+               android:background="@drawable/searchbg"
+               android:id="@+id/InputMsg"
+               android:hint="Message......"
+               android:layout_marginRight="0dp"
+               android:padding="10dp"
+               android:layout_marginLeft="20dp">
+           </EditText>
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/send"
+               android:nextFocusRight="@id/InputMsg"
+               android:id="@+id/btnSendMsg">
+           </ImageView>
+       </androidx.appcompat.widget.Toolbar>
+   </RelativeLayout>
+</LinearLayout>

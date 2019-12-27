@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragment.MessageFragment">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bottom"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="14dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnSwapeToSetting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/contacts"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnSwapeToSetting"
+                android:fontFamily="sans-serif"
+                android:text="Message"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/btnNewMessage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/editmessage" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+<!--        <SearchView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:id="@+id/btnSearchMessageContact"-->
+<!--            android:layout_below="@id/toolbar"-->
+<!--            android:background="@drawable/searchbg"-->
+<!--          android:focusable="false"-->
+<!--            android:iconifiedByDefault="false"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:queryBackground="@android:color/transparent"-->
+<!--            android:queryHint="Search" >-->
+<!--        </SearchView>-->
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@drawable/searchbg"
+            android:hint="search...."
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_input"
+            android:layout_below="@id/toolbar">
+
+        </EditText>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMessage"
+            android:layout_below="@id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:scrollbars="horizontal">
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</FrameLayout>

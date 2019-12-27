@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">	#FF1493</color>
+    <color name="colorPrimaryDark">#FF1493</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorSignupBtn">#19AA42</color>
+    <color name="colorTextForgot">#2EB396</color>
+    <color name="underlineColor">#9EE4E0E0</color>
+    <color name="colorToolbar">#FFF</color>
+    <color name="colorGray">#DAE4E1E1</color>
+    <color name="colorGray1">#F0F1EEEE</color>
+    <color name="colorGray2">#9AEEECEC</color>
+    <color name="backgroundLoading">#dddddd</color>
+</resources>
